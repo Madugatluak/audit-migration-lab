@@ -1,0 +1,7 @@
+
+[flyway]
+locations = ["filesystem:sql"]
+
+[environments.local]
+url = "jdbc:postgresql://localhost:5432/bootcamp"
+user = "postgres"
