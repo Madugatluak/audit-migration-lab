@@ -1,0 +1,26 @@
+PostgreSQL Backup and Restore Verification
+==========================================
+
+Backup file:
+~/backups/capstone.dump
+
+Restore database:
+capstone_restore_test
+
+Verification results:
+- Restore completed without reported errors.
+- Four tables were restored:
+  audit_log, categories, flyway_schema_history, students.
+- Student data was restored:
+  Amina Hassan - Advanced Databases
+  Grace Wanjiku - Data Analytics
+- Audit history was restored:
+  categories INSERT: 3
+  students INSERT: 3
+  students UPDATE: 1
+  students DELETE: 1
+
+Conclusion:
+The custom-format PostgreSQL backup was successfully restored
+to a separate test database, and the restored tables and data
+were verified.
