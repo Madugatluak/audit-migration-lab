@@ -1,0 +1,14 @@
+SET
+SET
+                                               QUERY PLAN                                               
+--------------------------------------------------------------------------------------------------------
+ Seq Scan on students  (cost=0.00..12.12 rows=1 width=448) (actual time=0.070..0.072 rows=1.00 loops=1)
+   Filter: ((full_name)::text = 'Amina Hassan'::text)
+   Rows Removed by Filter: 1
+   Buffers: shared hit=1
+ Planning:
+   Buffers: shared hit=83
+ Planning Time: 4.213 ms
+ Execution Time: 0.350 ms
+(8 rows)
+

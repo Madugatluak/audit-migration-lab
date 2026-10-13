@@ -1,0 +1,12 @@
+                                                              QUERY PLAN                                                              
+--------------------------------------------------------------------------------------------------------------------------------------
+ Index Scan using idx_students_full_name on students  (cost=0.14..8.16 rows=1 width=448) (actual time=0.043..0.043 rows=1.00 loops=1)
+   Index Cond: ((full_name)::text = 'Amina Hassan'::text)
+   Index Searches: 1
+   Buffers: shared hit=2
+ Planning:
+   Buffers: shared hit=83
+ Planning Time: 2.254 ms
+ Execution Time: 0.186 ms
+(8 rows)
+
