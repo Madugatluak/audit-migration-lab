@@ -1,0 +1,19 @@
+PostgreSQL Audit CRUD Verification
+==================================
+
+Test database:
+capstone_rls_test
+
+Test performed:
+Inserted, updated, and deleted a temporary student record
+inside a transaction.
+
+Verified audit events:
+- INSERT: new row values captured in new_row.
+- UPDATE: old_row and new_row captured.
+- DELETE: deleted row values captured in old_row.
+- All three events recorded changed_by and at.
+
+Result:
+All three audit operations were verified successfully.
+The transaction was rolled back after verification.
