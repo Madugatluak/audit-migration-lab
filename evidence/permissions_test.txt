@@ -1,0 +1,22 @@
+PostgreSQL Least-Privilege Permission Verification
+=================================================
+
+Test database:
+capstone_rls_test
+
+Role tested:
+app_reader (NOLOGIN)
+
+Verified results:
+- SELECT on public.students: allowed
+- SELECT on public.audit_log: denied
+- INSERT on public.audit_log: denied
+
+Audit trigger verification:
+- INSERT into students created an audit_log entry.
+- The entry captured the operation, current user, and new row values.
+- The test transaction was rolled back.
+
+Scope:
+The audit trigger was verified while connected as postgres.
+Ordinary application-writer trigger behavior has not yet been tested.
